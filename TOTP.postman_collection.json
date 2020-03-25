@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "503ec1ed-3926-43b9-919a-675acef7ae70",
+		"name": "TOTP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create APP ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/totp/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"totp",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invoke API",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "totp",
+						"value": "437705",
+						"type": "text"
+					},
+					{
+						"key": "appID",
+						"value": "8UoOfH",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/totp/api",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"totp",
+						"api"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
